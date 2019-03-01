@@ -130,8 +130,12 @@
         function playAudio() {
             
             bgSound.loop = true;
-            bgSound.currentTime = vid.currentTime;
+            
             bgSound.play();
+
+            bgSound.currentTime = vid.currentTime;
+
+            console.log(bgSound.currentTime, vid.currentTime);
 
             document.getElementById("audioButton").outerHTML = "";
 
