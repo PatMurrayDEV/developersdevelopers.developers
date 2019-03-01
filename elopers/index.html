@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Developers Developers Developers</title>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0;
+        }
+        audio {
+            display: none;
+            position: absolute;
+            bottom: -9999px;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+        }
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .madeby {
+            position: fixed;
+            left: 50px;
+            bottom: 50px;
+            color: #fff;
+            background-color:black;
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
-    <iframe style="width: 100%; height: 100%" id="ytplayer" type="text/html" width="720" height="540"
-      src="https://www.youtube.com/embed/Vhh_GeBPOhs?autoplay=1&controls=0&loop=1&modestbranding=1&playsinline=1&color=white"
-      frameborder="0" allowfullscreen
-     />
+
+<body>
+    <div class="video-container">
+        <video loop muted autoplay class="video" id="video">
+            <source src="/files/developers.mp4" type="video/mp4">
+        </video>
+    </div>
+    <audio autoplay preload loop controls src="/files/developers_audio.mp3" id="audio"></audio>
+    <div class="madeby">Made by <a href="https://twitter.com/_patmurray" target="_blank">Pat Murray</a></div>
+
+
 </body>
+
 </html>
