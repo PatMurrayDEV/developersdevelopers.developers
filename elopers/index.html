@@ -126,11 +126,12 @@
         var vid = document.getElementById("video");
         vid.play();
         var bgSound = new Audio("/files/developers_audio.mp3");
+        bgSound.load();
 
         function playAudio() {
             
             bgSound.loop = true;
-            vid.currentTime = 0;
+            bgSound.currentTime = vid.currentTime;
             bgSound.play();
 
             console.log(bgSound.currentTime, vid.currentTime);
