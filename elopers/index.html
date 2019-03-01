@@ -86,12 +86,21 @@
     <meta name="twitter:description" content="DEVELOPERS DEVELOPERS DEVELOPERS">
     <meta name="twitter:image" content="https://developersdevelopers.dev/files/igimage.jpg">
 
+    <meta name="twitter:player:stream" content="https://developersdevelopers.dev/files/developers.mp4"/>
+    <meta name="twitter:player:stream:content_type" content="video/mp3"/>
+
     <!-- Open Graph data -->
     <meta property="og:title" content="DEVELOPERS DEVELOPERS DEVELOPERS" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://developersdevelopers.dev/files/igimage.jpg" />
     <meta property="og:image:secure_url" content="https://developersdevelopers.dev/files/igimage.jpg" />
     <meta property="og:description" content="DEVELOPERS DEVELOPERS DEVELOPERS" />
+
+    <meta property="og:video" content="https://developersdevelopers.dev/files/developers.mp4">
+    <meta property="og:video:secure_url" content="https://developersdevelopers.dev/files/developers.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="320">
+    <meta property="og:video:height" content="240">
 
     <meta name="author" content="Pat Murray">
     <meta name="description" content="DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS DEVELOPERS">
@@ -116,11 +125,10 @@
     <script>
         var vid = document.getElementById("video");
         vid.play();
+        var bgSound = new Audio("/files/developers_audio.mp3");
 
         function playAudio() {
-            var vid = document.getElementById("video");
-
-            bgSound = new Audio("/files/developers_audio.mp3");
+            
             bgSound.loop = true;
             bgSound.currentTime = vid.currentTime;
             bgSound.play();
