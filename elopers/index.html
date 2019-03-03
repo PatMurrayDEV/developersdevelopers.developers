@@ -109,7 +109,7 @@
 <body>
     <div class="video-container">
         <video loop muted autoplay playsinline class="video" id="video">
-            <source src="/files/developers_muted.mp4" type="video/mp4">
+            <source src="/files/developers.mp4" type="video/mp4">
         </video>
     </div>
     <div class="madeby">A bad joke made by <a href="https://twitter.com/_patmurray" target="_blank">Pat Murray</a></div>
@@ -125,16 +125,11 @@
     <script>
         var vid = document.getElementById("video");
         vid.play();
-        var bgSound = new Audio("/files/developers_audio.mp3");
-        bgSound.load();
+        
 
         function playAudio() {
             
-            bgSound.loop = true;
-            bgSound.currentTime = vid.currentTime;
-            bgSound.play();
-
-            console.log(bgSound.currentTime, vid.currentTime);
+            video.muted = true;
 
             document.getElementById("audioButton").outerHTML = "";
 
