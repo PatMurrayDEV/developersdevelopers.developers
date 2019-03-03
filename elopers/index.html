@@ -108,7 +108,7 @@
 
 <body>
     <div class="video-container">
-        <video muted autoplay playsinline class="video" id="video">
+        <video loop muted autoplay playsinline class="video" id="video">
             <source src="/files/developers_short.webm" type="video/webm">
             <source src="/files/developers_short.ogv" type="video/ogg">
             <source src="/files/developers_short.MOV" type="video/mp4">
@@ -128,12 +128,6 @@
     <script>
         var vid = document.getElementById("video");
         vid.play();
-
-        document.getElementById('video').addEventListener('ended', function(e) {
-            e.target.currentTime = 0;
-            e.target.play();
-        }, false);
-        
 
         function playAudio() {
             
